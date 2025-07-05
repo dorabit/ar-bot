@@ -33,17 +33,20 @@ module.exports = {
       Object.keys(categories)
         .filter(cat => cat !== "info")
         .forEach(category => {
-          msg += `✧ ${category.toUpperCase()} ✧\n`;
+          msg += `🍂✨${category.toUpperCase()} ✨🍂\n`;
           msg += `⊰⊰⊰⊰⊰⊰⊰⊰⊰⊰⊰⊰\n`;
           const names = categories[category].commands.sort();
           names.forEach(cmd => {
-            msg += `  ❖ ${cmd.padEnd(15)}\n`;
+            msg += `🎊${cmd.padEnd(15)}🎊\n`;
           });
-          msg += `══━━━━✥🍀✥━━━━══\n`;
+          msg += `\n`;
         });
 
-      msg += `𝙲𝚁𝙸𝚂𝚃𝙰𝙻𝙸𝙽𝙴 𝐝𝐢𝐬𝐩𝐨𝐬𝐞 𝐚𝐜𝐭𝐮𝐞𝐥𝐥𝐞𝐦𝐞𝐧𝐭 𝐝𝐞 🍂 ${commands.size} 🍂 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬 𝐒𝐚𝐢𝐬𝐢𝐬 ${prefix}𝐡𝐞𝐥𝐩 𝐬𝐮𝐢𝐯𝐢 𝐝𝐮 𝐧𝐨𝐦 𝐝𝐞 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 𝐩𝐨𝐮𝐫 𝐩𝐥𝐮𝐬 𝐝𝐞 𝐝𝐞𝐭𝐚𝐢𝐥𝐬 𝐬𝐮𝐫 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞`;
-      msg += ` ══━━━━✥🍀✥━━━━══\n`;
+      msg += `👾|𝙲𝚁𝙸𝚂𝚃𝙰𝙻𝙸𝙽𝙴 𝐝𝐢𝐬𝐩𝐨𝐬𝐞 𝐚𝐜𝐭𝐮𝐞𝐥𝐥𝐞𝐦𝐞𝐧𝐭 𝐝𝐞 🍂 ${commands.size} 🍂 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞𝐬.\n`;
+
+      msg +=`⚙️| 𝐒𝐚𝐢𝐬𝐢𝐬 ${prefix}𝐡𝐞𝐥𝐩 𝐬𝐮𝐢𝐯𝐢 𝐝𝐮 𝐧𝐨𝐦 𝐝𝐞 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞 𝐩𝐨𝐮𝐫 𝐩𝐥𝐮𝐬 𝐝𝐞 𝐝𝐞𝐭𝐚𝐢𝐥𝐬 𝐬𝐮𝐫 𝐥𝐚 𝐜𝐨𝐦𝐦𝐚𝐧𝐝𝐞.\n`;
+
+      msg+=`𝐇𝐞𝐥𝐥𝐨 𝐥'𝐚𝐦𝐢 (𝐞) 👋 𝐫𝐞𝐣𝐨𝐢𝐧𝐬 𝐦𝐨𝐧 𝐠𝐫𝐨𝐮𝐩𝐞 𝐞𝐧 𝐮𝐭𝐢𝐥𝐢𝐬𝐚𝐧𝐭 𝐥𝐚 𝐜𝐦𝐝 ${prefix} 𝐬𝐡𝐚𝐝𝐨𝐰𝐠𝐜.`;
       await message.reply({ body: msg });
     } else {
       const commandName = args[0].toLowerCase();
@@ -86,4 +89,4 @@ function roleTextToString(roleText) {
     default:
       return "Rôle inconnu";
   }
-	  }
+	    }
