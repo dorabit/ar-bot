@@ -5,9 +5,9 @@ const axios = require('axios');
 module.exports = {
     config: {
         name: "stat",
-        aliases: ["stat],
+        aliases: ["stat"],
         version: "1.1",
-        author: "ミ★𝐒𝐎𝐍𝐈𝐂✄𝐄𝐗𝐄 3.0★彡", // don't change credits 
+        author: "🤖", // don't change credits 
         role: 0,
         shortDescription: {
             en: "Displays bot uptime, system information, battery level, and current time in Cameroon."
