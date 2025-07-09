@@ -4,8 +4,8 @@ const axios = require('axios');
 
 module.exports = {
     config: {
-        name: "stat",
-        aliases: ["stat"],
+        name: "uptime2",
+        aliases: ["upt2","up2"],
         version: "1.1",
         author: "🤖", // don't change credits 
         role: 0,
