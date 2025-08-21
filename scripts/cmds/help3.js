@@ -34,7 +34,10 @@ module.exports = {
 			const categories = {};
 			let msg = "";
 
-			msg += `╔═══════════════╗\n💫 ᴍɪᴅᴏᴜʀɪʏᴀ LIST 💫\n╚═══════════════╝`;
+			msg += `◊════════════════◊
+			🔹    Tide    🔹
+			 ◊════════════════◊
+			`;
 
 			for (const [name, value] of commands) {
 					if (value.config.role > 1 && role < value.config.role) continue;
@@ -46,11 +49,11 @@ module.exports = {
 8
 			Object.keys(categories).forEach(category => {
 					if (category !== "info") {
-							msg += `\n\n│『 ${category.toUpperCase()} 』`;
+							msg += `\n\n│❴ ${category.toUpperCase()} ❵`;
 
 							const names = categories[category].commands.sort();
 							for (let i = 0; i < names.length; i += 1) {
-									const cmds = names.slice(i, i + 1).map(item => `│⚜️${item}`);
+									const cmds = names.slice(i, i + 1).map(item => `│${item}`);
 									msg += `\n${cmds.join(" ".repeat(Math.max(0, 5 - cmds.join("").length)))}`;
 							}
 
@@ -61,7 +64,7 @@ module.exports = {
 			const totalCommands = commands.size;
 			msg += `\nحاليا البوت لديه ${totalCommands} أمر يمكن إستخدامه\n`;
 			msg += `أكتب ${prefix} أوامر من أجل أن ترى كيفية إستخدام ذالك الأمر\n`;
-			msg += `💚 | ᴍɪᴅᴏᴜʀɪʏᴀ`;
+			msg += `○ ❴ Tide ❵ ○`;
 
 
 			const helpListImages = [
@@ -107,7 +110,7 @@ module.exports = {
 	│ الإصدار : ${configCommand.version || "1.0"}
 	│ الصلاحية : ${roleText}
 	│ وقت الإنتظار : ${configCommand.countDown || 1} ثانية
-	│ المؤلف : ${author}
+	│ المؤلف : Rako San
 	├── كيفية الاستخدام 
 	│ ${usage}
 	├── ملاحظة 
