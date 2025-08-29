@@ -11,21 +11,21 @@ module.exports = function (Passport, db, bcrypt) {
 	});
 
 	Passport.use(new localStrategy({
-		usernameField: "username",
+		usernameField: "email",   // عدلتها عشان تتوافق مع قاعدة البيانات
 		passwordField: "password",
 		passReqToCallback: true
 	}, async function (req, email, password, done) {
 		const user = await db.get(email);
 		if (!user)
-			return done(null, false, { message: "Email không tồn tại" });
+			return done(null, false, { message: "البريد الإلكتروني غير موجود ❌" });
 
 		const isMatch = await bcrypt.compare(password, user.password);
 		if (!isMatch)
-			return done(null, false, { message: "Địa chỉ email hoặc mật khẩu không đúng" });
+			return done(null, false, { message: "البريد الإلكتروني أو كلمة المرور غير صحيحة 🚫" });
 
-		const remeber = req.body.remeber;
-		if (remeber)
-			req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days
+		const remember = req.body.remember;
+		if (remember)
+			req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; // 30 يوم
 		else
 			req.session.cookie.expires = false;
 
